@@ -1,22 +1,5 @@
-students = {
-}
-tasks = []
-names = []
-def add_student(student):
-    global students
-    if student not in names:
-        names.append(student)
-        students[student] = {}
-
-def add_class(task):
-    global students
-    if task not in tasks:
-        tasks.append(task)
-        for name in names:
-            students[name][task]=[]
-
-def add_mark(student,task,mark):
-    global students
-    students[student][task].append(mark)
-
+def choise():
+    choise = int(input(
+        '1 - добавить студента \n 2 - Добавить предмет \n 3 - Добавление оценки ученику по предмету \n 4 - Показ списка учеников \n 5 - Показ листа оценок конкретного ученика\n 6 - выход\n'))
+    return choise
 

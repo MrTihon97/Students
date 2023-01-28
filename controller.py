@@ -1,11 +1,39 @@
 import importstudent as imp
-import view
+import view as v
 
-def master():
-    choice = imp.get_operation()
-    if choice == 1:
-        imp.get_student
-    elif choice == 2:
-        imp.get_class
-    elif choice ==3:
-        imp.get_mark
+
+students = {
+}
+names = []
+lessons = []
+
+
+def start():
+    while True:
+        choise = v.choise()
+        if choise == 1:
+            name = imp.get_student()
+            if name not in students:
+                names.append(name)
+                students[name] = {}
+                for lesson in lessons:
+                    students[name][lesson] = []
+
+        elif choise == 2:
+            lesson = imp.get_less()
+            if lesson not in lessons:
+                lessons.append(lesson)
+                for name in names:
+                    students[name][lesson] = []
+
+        elif choise == 3:
+            name, lesson, mark = imp.get_mark()
+            students[name][lesson].append(mark)
+
+        elif choise == 4:
+                print(students)
+        elif choise == 5:
+            imp.find_student()
+            print(students[name])
+        elif choise == 6:
+            break

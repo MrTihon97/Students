@@ -1,12 +1,18 @@
-def get_operation():
-   choice=input('1-запись ученика\n2-предмет\n3-оценка\n')
-   return choice
 def get_student():
-    Name = input('Введите имя и фамилию: ')
-    return Name
-def get_class():
-    getclass = input('Введите предмет: ')
-    return getclass
+    name = input('Введите имя и фамилию студента: ')
+    return name
+
+def get_less():
+    less = input('Введите предмет студента: ')
+    return less
+
 def get_mark():
-    mark = input('Введите оценку по предмету: ')
-    return mark
+    name = input('Введите имя и фамилию студента: ')
+    less = input('Введите предмет студента: ')
+    mark = (input('Введите оценку по предмету: '))
+    return name,less,mark
+    
+
+def find_student():
+    name = input('Введите имя студента для просмотра оценок: ')
+    return name
